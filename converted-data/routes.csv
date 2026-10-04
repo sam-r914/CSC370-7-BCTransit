@@ -1,0 +1,70 @@
+route_id,route_name
+1-VIC,1: South Oak Bay / Downtown
+2-VIC,2: James Bay / South Oak Bay
+3-VIC,3: James Bay / Royal Jubilee
+4-VIC,4: UVic / Downtown via Hillside
+5-VIC,5: James Bay / Willows
+6-VIC,6: Royal Oak Exch / Downtown via Royal Oak Centre
+7-VIC,7: UVic / Downtown via Fairfield
+8-VIC,8: Interurban / Tillicum Centre / Oak Bay
+9-VIC,9: Royal Oak Exch / UVic
+10-VIC,10: James Bay / Royal Jubilee
+11-VIC,11: Tillicum Centre / UVic
+12-VIC,12: University Heights / UVic
+14-VIC,14: Vic General / UVic
+15-VIC,15: Esquimalt / UVic
+17-VIC,17: Cedar Hill
+6A-VIC,6A: Royal Oak Exch / Downtown via Emily Carr
+6B-VIC,6B: Royal Oak Exch / Downtown via Chatterton
+7N-VIC,7N: UVic / Downtown via Cook Street Vlg Night Route
+21N-VIC,21N: Interurban Night Route
+21-VIC,21: Interurban / Downtown
+22-VIC,22: Vic General / Hillside Centre
+22A-VIC,22A: Vic General / Hillside Centre via Strawberry Vale
+24-VIC,24: Cedar Hill / Tillicum Centre
+25-VIC,25: Maplewood / Tillicum Centre
+26-VIC,26: UVic / Dockyard via McKenzie-Tillicum
+27-VIC,27: Gordon Head / Downtown
+28-VIC,28: Majestic / Downtown
+27X-VIC,27X: Downtown Express
+30-VIC,30: Royal Oak Exch / Downtown
+31-VIC,31: Royal Oak Exch / Downtown
+32-VIC,32: Cordova Bay / Royal Oak Exch
+28X-VIC,28X: Majestic Express
+70X-VIC,70X: Swartz Bay / Downtown Express
+35-VIC,35: Ridge
+26A-VIC,26A: UVic / Uptown via Saanich Rd
+76-VIC,76: Swartz Bay / UVic
+39-VIC,39: Interurban / Royal Oak Exch / UVic
+38-VIC,38: Royal Oak Exch / Westhills Exch
+40-VIC,40: UVic / Dockyard via McKenzie-Admirals
+51X-VIC,51X: Westhills Exch / UVic Express
+43-VIC,43: Royal Roads via Belmont Park
+88A-VIC,88A: Airport / Sidney bypass Sidney Industrial
+72A-VIC,72A: Swartz Bay / Downtown
+46-VIC,46: Dockyard / Westhills Exch
+47-VIC,47: Goldstream Meadows / Downtown
+48-VIC,48: Happy Valley / Downtown
+49-VIC,49: Skirt Mountain / Langford Exch
+52-VIC,52: Colwood Exch / Bear Mountain
+53-VIC,53: Vic General / Langford Exch
+54-VIC,54: Metchosin / Langford Exch
+55-VIC,55: Happy Valley / Langford Exch
+57-VIC,57: Thetis Heights / Langford Exch
+58-VIC,58: Goldstream Meadows / Langford Exch
+59-VIC,59: Triangle Mountain / Langford Exch
+60-VIC,60: Wishart / Langford Exch
+61-VIC,61: Sooke / Langford / Downtown
+63-VIC,63: Otter Point
+64-VIC,64: Langford Exch / Sooke via E Sooke and Beecher Bay
+65-VIC,65: Sooke / Downtown via Westhills
+70-VIC,70: Swartz Bay / Downtown
+71-VIC,71: Swartz Bay / Downtown
+72-VIC,72: Swartz Bay / Downtown
+75-VIC,75: Saanichton / Royal Oak / Downtown
+81-VIC,81: Saanichton / Sidney / Swartz Bay
+83-VIC,83: Sidney / Brentwood / Royal Oak
+85-VIC,85: North Saanich
+87-VIC,87: Tsawout / Sidney via Airport and Dean Park
+88-VIC,88: Airport / Sidney via Sidney Industrial
+95-VIC,95: Langford / Downtown Blink

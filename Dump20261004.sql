@@ -25,7 +25,7 @@ DROP TABLE IF EXISTS `bus_route`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `bus_route` (
-  `route_id` int NOT NULL,
+  `route_id` varchar(15) NOT NULL,
   `route_length` int DEFAULT NULL,
   `route_name` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`route_id`)
@@ -114,7 +114,7 @@ DROP TABLE IF EXISTS `route_stops`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `route_stops` (
   `stop_id` int NOT NULL,
-  `route_id` int NOT NULL,
+  `route_id` varchar(15) NOT NULL,
   `position_index` int DEFAULT NULL,
   PRIMARY KEY (`stop_id`,`route_id`),
   KEY `FK_route` (`route_id`),
