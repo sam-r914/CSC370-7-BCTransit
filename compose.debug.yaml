@@ -1,6 +1,0 @@
-services:
-  csc3707bctransit:
-    image: csc3707bctransit
-    build:
-      context: .
-      dockerfile: ./Dockerfile

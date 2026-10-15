@@ -1,0 +1,36 @@
+
+services:
+  db:
+    # 1. Use the official MySQL base image
+    image: mysql:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: myrootpassword
+      MYSQL_DATABASE: bctransit
+      MYSQL_USER: myuser
+      MYSQL_PASSWORD: mypassword
+    ports:
+      - "3306:3306"
+    volumes:
+      #auto-init SQL scripts
+      - ./init_schema.sql:/docker-entrypoint-initdb.d/init_schema.sql
+      - ./load_data.sql:/docker-entrypoint-initdb.d/load_data.sql
+      - ./converted-data/route_stops.csv:/var/lib/mysql-files/route_stops.csv
+      - ./converted-data/routes.csv:/var/lib/mysql-files/routes.csv
+      - ./converted-data/stops.csv:/var/lib/mysql-files/stops.csv
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
+
+  display-app:
+    image: mysql:latest
+    depends_on:
+      db:
+        condition: service_healthy
+    # Mounts your current local folder (.) to /output inside the container
+    volumes:
+      - .:/output
+      - ./export_tables.sh:/export_tables.sh
+    entrypoint: ["sh", "/export_tables.sh"]

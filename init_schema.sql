@@ -102,6 +102,7 @@ CREATE TABLE `ratings` (
   `updated_at` datetime DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `average` double(10,2) GENERATED ALWAYS AS ((`sum` / `count`)) VIRTUAL,
   PRIMARY KEY (`stop_id`,`type`)
+  CONSTRAINT `fk_ratings_stop` FOREIGN KEY (`stop_id`) REFERENCES `bus_stop` (`stop_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
