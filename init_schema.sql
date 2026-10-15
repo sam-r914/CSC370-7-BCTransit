@@ -1,10 +1,10 @@
 CREATE DATABASE  IF NOT EXISTS `bctransit` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
 USE `bctransit`;
--- MySQL dump 10.13  Distrib 8.0.46, for macos15 (arm64)
+-- MySQL dump 10.13  Distrib 8.0.46, for Win64 (x86_64)
 --
--- Host: 127.0.0.1    Database: bctransit
+-- Host: localhost    Database: bctransit
 -- ------------------------------------------------------
--- Server version	26.7.0
+-- Server version	8.0.46
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -33,6 +33,15 @@ CREATE TABLE `bus_route` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
+-- Dumping data for table `bus_route`
+--
+
+LOCK TABLES `bus_route` WRITE;
+/*!40000 ALTER TABLE `bus_route` DISABLE KEYS */;
+/*!40000 ALTER TABLE `bus_route` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `bus_stop`
 --
 
@@ -49,6 +58,61 @@ CREATE TABLE `bus_stop` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
+-- Dumping data for table `bus_stop`
+--
+
+LOCK TABLES `bus_stop` WRITE;
+/*!40000 ALTER TABLE `bus_stop` DISABLE KEYS */;
+/*!40000 ALTER TABLE `bus_stop` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!50003 SET @saved_cs_client      = @@character_set_client */ ;
+/*!50003 SET @saved_cs_results     = @@character_set_results */ ;
+/*!50003 SET @saved_col_connection = @@collation_connection */ ;
+/*!50003 SET character_set_client  = cp850 */ ;
+/*!50003 SET character_set_results = cp850 */ ;
+/*!50003 SET collation_connection  = cp850_general_ci */ ;
+/*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
+/*!50003 SET sql_mode              = 'ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION' */ ;
+DELIMITER ;;
+/*!50003 CREATE*/ /*!50017 DEFINER=`root`@`localhost`*/ /*!50003 TRIGGER `create_ratings_for_stop` AFTER INSERT ON `bus_stop` FOR EACH ROW BEGIN
+		INSERT INTO ratings (stop_id, type)
+		VALUES (NEW.stop_id, 'noise');
+		INSERT INTO ratings (stop_id, type)
+		VALUES (NEW.stop_id, 'cleanliness');
+END */;;
+DELIMITER ;
+/*!50003 SET sql_mode              = @saved_sql_mode */ ;
+/*!50003 SET character_set_client  = @saved_cs_client */ ;
+/*!50003 SET character_set_results = @saved_cs_results */ ;
+/*!50003 SET collation_connection  = @saved_col_connection */ ;
+/*!50003 SET @saved_cs_client      = @@character_set_client */ ;
+/*!50003 SET @saved_cs_results     = @@character_set_results */ ;
+/*!50003 SET @saved_col_connection = @@collation_connection */ ;
+/*!50003 SET character_set_client  = cp850 */ ;
+/*!50003 SET character_set_results = cp850 */ ;
+/*!50003 SET collation_connection  = cp850_general_ci */ ;
+/*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
+/*!50003 SET sql_mode              = 'ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION' */ ;
+DELIMITER ;;
+/*!50003 CREATE*/ /*!50017 DEFINER=`root`@`localhost`*/ /*!50003 TRIGGER `create_stop_accessibility` AFTER INSERT ON `bus_stop` FOR EACH ROW BEGIN
+		INSERT INTO tf_accessibility (stop_id, name)
+		VALUES (NEW.stop_id, 'wheelchair');
+		INSERT INTO tf_accessibility (stop_id, name)
+		VALUES (NEW.stop_id, 'shelter');
+		INSERT INTO tf_accessibility (stop_id, name)
+		VALUES (NEW.stop_id, 'trashcan');
+		INSERT INTO tf_accessibility (stop_id, name)
+		VALUES (NEW.stop_id, 'seating');
+		INSERT INTO tf_accessibility (stop_id, name)
+		VALUES (NEW.stop_id, 'sidewalk');
+END */;;
+DELIMITER ;
+/*!50003 SET sql_mode              = @saved_sql_mode */ ;
+/*!50003 SET character_set_client  = @saved_cs_client */ ;
+/*!50003 SET character_set_results = @saved_cs_results */ ;
+/*!50003 SET collation_connection  = @saved_col_connection */ ;
+
+--
 -- Table structure for table `privileged_user`
 --
 
@@ -61,6 +125,15 @@ CREATE TABLE `privileged_user` (
   CONSTRAINT `privileged_user_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `privileged_user`
+--
+
+LOCK TABLES `privileged_user` WRITE;
+/*!40000 ALTER TABLE `privileged_user` DISABLE KEYS */;
+/*!40000 ALTER TABLE `privileged_user` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
 -- Table structure for table `proposed_changes`
@@ -88,6 +161,15 @@ CREATE TABLE `proposed_changes` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
+-- Dumping data for table `proposed_changes`
+--
+
+LOCK TABLES `proposed_changes` WRITE;
+/*!40000 ALTER TABLE `proposed_changes` DISABLE KEYS */;
+/*!40000 ALTER TABLE `proposed_changes` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `ratings`
 --
 
@@ -101,10 +183,19 @@ CREATE TABLE `ratings` (
   `sum` int DEFAULT NULL,
   `updated_at` datetime DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `average` double(10,2) GENERATED ALWAYS AS ((`sum` / `count`)) VIRTUAL,
-  PRIMARY KEY (`stop_id`,`type`)
+  PRIMARY KEY (`stop_id`,`type`),
   CONSTRAINT `fk_ratings_stop` FOREIGN KEY (`stop_id`) REFERENCES `bus_stop` (`stop_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `ratings`
+--
+
+LOCK TABLES `ratings` WRITE;
+/*!40000 ALTER TABLE `ratings` DISABLE KEYS */;
+/*!40000 ALTER TABLE `ratings` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
 -- Table structure for table `route_stops`
@@ -125,6 +216,15 @@ CREATE TABLE `route_stops` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
+-- Dumping data for table `route_stops`
+--
+
+LOCK TABLES `route_stops` WRITE;
+/*!40000 ALTER TABLE `route_stops` DISABLE KEYS */;
+/*!40000 ALTER TABLE `route_stops` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `tf_accessibility`
 --
 
@@ -142,6 +242,15 @@ CREATE TABLE `tf_accessibility` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
+-- Dumping data for table `tf_accessibility`
+--
+
+LOCK TABLES `tf_accessibility` WRITE;
+/*!40000 ALTER TABLE `tf_accessibility` DISABLE KEYS */;
+/*!40000 ALTER TABLE `tf_accessibility` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `user`
 --
 
@@ -157,6 +266,14 @@ CREATE TABLE `user` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
+--
+-- Dumping data for table `user`
+--
+
+LOCK TABLES `user` WRITE;
+/*!40000 ALTER TABLE `user` DISABLE KEYS */;
+/*!40000 ALTER TABLE `user` ENABLE KEYS */;
+UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -167,4 +284,4 @@ CREATE TABLE `user` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-10-04 14:35:06
+-- Dump completed on 2026-10-14 22:20:13
