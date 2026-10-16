@@ -160,7 +160,7 @@ DROP TABLE IF EXISTS `tf_accessibility`;
 CREATE TABLE `tf_accessibility` (
   `stop_id` int NOT NULL,
   `name` enum('wheelchair','shelter','trashcan','seating','sidewalk') NOT NULL,
-  `value` tinyint(1) DEFAULT '0',
+  `value` tinyint(1) DEFAULT NULL,
   `updated_at` datetime DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`stop_id`,`name`),
   CONSTRAINT `tf_accessibility_ibfk_1` FOREIGN KEY (`stop_id`) REFERENCES `bus_stop` (`stop_id`)
