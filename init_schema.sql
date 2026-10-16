@@ -1,4 +1,4 @@
-CREATE DATABASE  IF NOT EXISTS `bctransit` 
+CREATE DATABASE  IF NOT EXISTS `bctransit`;
 USE `bctransit`;
 -- MySQL dump 10.13  Distrib 8.0.46, for Win64 (x86_64)
 --
@@ -27,7 +27,7 @@ CREATE TABLE `bus_route` (
   `route_length` int DEFAULT NULL,
   `route_name` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`route_id`)
-) 
+);
 
 --
 -- Dumping data for table `bus_route`
@@ -49,40 +49,7 @@ CREATE TABLE `bus_stop` (
   `longitude` float DEFAULT NULL,
   `stop_name` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`stop_id`)
-) 
-
---
--- Dumping data for table `bus_stop`
---
-
-LOCK TABLES `bus_stop` WRITE;
-/*!40000 ALTER TABLE `bus_stop` DISABLE KEYS */;
-/*!40000 ALTER TABLE `bus_stop` ENABLE KEYS */;
-UNLOCK TABLES;
-/*!50003 SET @saved_cs_client      = @@character_set_client */ ;
-/*!50003 SET @saved_cs_results     = @@character_set_results */ ;
-/*!50003 SET @saved_col_connection = @@collation_connection */ ;
-/*!50003 SET character_set_client  = cp850 */ ;
-/*!50003 SET character_set_results = cp850 */ ;
-/*!50003 SET collation_connection  = cp850_general_ci */ ;
-/*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
-/*!50003 SET sql_mode              = 'ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION' */ ;
-/*!50003 SET sql_mode              = @saved_sql_mode */ ;
-/*!50003 SET character_set_client  = @saved_cs_client */ ;
-/*!50003 SET character_set_results = @saved_cs_results */ ;
-/*!50003 SET collation_connection  = @saved_col_connection */ ;
-/*!50003 SET @saved_cs_client      = @@character_set_client */ ;
-/*!50003 SET @saved_cs_results     = @@character_set_results */ ;
-/*!50003 SET @saved_col_connection = @@collation_connection */ ;
-/*!50003 SET character_set_client  = cp850 */ ;
-/*!50003 SET character_set_results = cp850 */ ;
-/*!50003 SET collation_connection  = cp850_general_ci */ ;
-/*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
-/*!50003 SET sql_mode              = 'ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION' */ ;
-/*!50003 SET sql_mode              = @saved_sql_mode */ ;
-/*!50003 SET character_set_client  = @saved_cs_client */ ;
-/*!50003 SET character_set_results = @saved_cs_results */ ;
-/*!50003 SET collation_connection  = @saved_col_connection */ ;
+);
 
 --
 -- Table structure for table `privileged_user`
@@ -94,7 +61,6 @@ CREATE TABLE `privileged_user` (
   PRIMARY KEY (`user_id`),
   CONSTRAINT `privileged_user_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Table structure for table `proposed_changes`
@@ -117,7 +83,6 @@ CREATE TABLE `proposed_changes` (
   CONSTRAINT `proposed_changes_ibfk_2` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`),
   CONSTRAINT `proposed_changes_ibfk_3` FOREIGN KEY (`reviewed_by`) REFERENCES `privileged_user` (`user_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Table structure for table `ratings`
@@ -134,7 +99,6 @@ CREATE TABLE `ratings` (
   PRIMARY KEY (`stop_id`,`type`),
   CONSTRAINT `fk_ratings_stop` FOREIGN KEY (`stop_id`) REFERENCES `bus_stop` (`stop_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Table structure for table `route_stops`
@@ -150,7 +114,6 @@ CREATE TABLE `route_stops` (
   CONSTRAINT `FK_route` FOREIGN KEY (`route_id`) REFERENCES `bus_route` (`route_id`),
   CONSTRAINT `FK_stop` FOREIGN KEY (`stop_id`) REFERENCES `bus_stop` (`stop_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Table structure for table `tf_accessibility`
@@ -165,7 +128,6 @@ CREATE TABLE `tf_accessibility` (
   PRIMARY KEY (`stop_id`,`name`),
   CONSTRAINT `tf_accessibility_ibfk_1` FOREIGN KEY (`stop_id`) REFERENCES `bus_stop` (`stop_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Table structure for table `user`
@@ -179,15 +141,4 @@ CREATE TABLE `user` (
   PRIMARY KEY (`user_id`),
   UNIQUE KEY `email` (`email`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
-/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
-/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
-/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
-/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
-/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
-
--- Dump completed on 2026-10-14 22:20:13

@@ -15,9 +15,7 @@ services:
       - ./init_schema.sql:/docker-entrypoint-initdb.d/init_schema.sql
       - ./load_data.sql:/docker-entrypoint-initdb.d/load_data.sql
       - ./sload_conditional_data.sql:/docker-entrypoint-initdb.d/sload_conditional_data.sql
-      - ./converted-data/route_stops.csv:/var/lib/mysql-files/route_stops.csv
-      - ./converted-data/routes.csv:/var/lib/mysql-files/routes.csv
-      - ./converted-data/stops.csv:/var/lib/mysql-files/stops.csv
+      - ./BCT-data:/var/lib/mysql-files/BCT-data
     healthcheck:
       test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
       interval: 5s
