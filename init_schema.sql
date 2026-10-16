@@ -1,4 +1,4 @@
-CREATE DATABASE  IF NOT EXISTS `bctransit` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
+CREATE DATABASE  IF NOT EXISTS `bctransit` 
 USE `bctransit`;
 -- MySQL dump 10.13  Distrib 8.0.46, for Win64 (x86_64)
 --
@@ -20,17 +20,14 @@ USE `bctransit`;
 --
 -- Table structure for table `bus_route`
 --
-
 DROP TABLE IF EXISTS `bus_route`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
+
 CREATE TABLE `bus_route` (
   `route_id` varchar(15) NOT NULL,
   `route_length` int DEFAULT NULL,
   `route_name` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`route_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
+) 
 
 --
 -- Dumping data for table `bus_route`
@@ -44,18 +41,15 @@ UNLOCK TABLES;
 --
 -- Table structure for table `bus_stop`
 --
-
 DROP TABLE IF EXISTS `bus_stop`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
+
 CREATE TABLE `bus_stop` (
   `stop_id` int NOT NULL,
   `latitude` float DEFAULT NULL,
   `longitude` float DEFAULT NULL,
   `stop_name` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`stop_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
+) 
 
 --
 -- Dumping data for table `bus_stop`
@@ -115,16 +109,13 @@ DELIMITER ;
 --
 -- Table structure for table `privileged_user`
 --
-
 DROP TABLE IF EXISTS `privileged_user`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
+
 CREATE TABLE `privileged_user` (
   `user_id` int NOT NULL,
   PRIMARY KEY (`user_id`),
   CONSTRAINT `privileged_user_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
+) 
 
 --
 -- Dumping data for table `privileged_user`
@@ -138,10 +129,8 @@ UNLOCK TABLES;
 --
 -- Table structure for table `proposed_changes`
 --
-
 DROP TABLE IF EXISTS `proposed_changes`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
+
 CREATE TABLE `proposed_changes` (
   `user_id` int NOT NULL,
   `stop_id` int DEFAULT NULL,
@@ -157,8 +146,7 @@ CREATE TABLE `proposed_changes` (
   CONSTRAINT `proposed_changes_ibfk_1` FOREIGN KEY (`stop_id`) REFERENCES `bus_stop` (`stop_id`),
   CONSTRAINT `proposed_changes_ibfk_2` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`),
   CONSTRAINT `proposed_changes_ibfk_3` FOREIGN KEY (`reviewed_by`) REFERENCES `privileged_user` (`user_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
+)
 
 --
 -- Dumping data for table `proposed_changes`
@@ -172,10 +160,8 @@ UNLOCK TABLES;
 --
 -- Table structure for table `ratings`
 --
-
 DROP TABLE IF EXISTS `ratings`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
+
 CREATE TABLE `ratings` (
   `stop_id` int NOT NULL,
   `type` enum('noise','cleanliness') NOT NULL,
@@ -200,10 +186,8 @@ UNLOCK TABLES;
 --
 -- Table structure for table `route_stops`
 --
-
 DROP TABLE IF EXISTS `route_stops`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
+
 CREATE TABLE `route_stops` (
   `stop_id` int NOT NULL,
   `route_id` varchar(15) NOT NULL,
@@ -212,8 +196,7 @@ CREATE TABLE `route_stops` (
   KEY `FK_route` (`route_id`),
   CONSTRAINT `FK_route` FOREIGN KEY (`route_id`) REFERENCES `bus_route` (`route_id`),
   CONSTRAINT `FK_stop` FOREIGN KEY (`stop_id`) REFERENCES `bus_stop` (`stop_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
+) 
 
 --
 -- Dumping data for table `route_stops`
@@ -227,10 +210,8 @@ UNLOCK TABLES;
 --
 -- Table structure for table `tf_accessibility`
 --
-
 DROP TABLE IF EXISTS `tf_accessibility`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
+
 CREATE TABLE `tf_accessibility` (
   `stop_id` int NOT NULL,
   `name` enum('wheelchair','shelter','trashcan','seating','sidewalk') NOT NULL,
@@ -238,8 +219,7 @@ CREATE TABLE `tf_accessibility` (
   `updated_at` datetime DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`stop_id`,`name`),
   CONSTRAINT `tf_accessibility_ibfk_1` FOREIGN KEY (`stop_id`) REFERENCES `bus_stop` (`stop_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
+) 
 
 --
 -- Dumping data for table `tf_accessibility`
@@ -253,18 +233,15 @@ UNLOCK TABLES;
 --
 -- Table structure for table `user`
 --
-
 DROP TABLE IF EXISTS `user`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
+
 CREATE TABLE `user` (
   `user_id` int NOT NULL,
   `email` varchar(30) DEFAULT NULL,
   `password` varchar(25) DEFAULT NULL,
   PRIMARY KEY (`user_id`),
   UNIQUE KEY `email` (`email`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
+) 
 
 --
 -- Dumping data for table `user`
