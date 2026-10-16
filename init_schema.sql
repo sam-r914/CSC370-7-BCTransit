@@ -67,14 +67,6 @@ UNLOCK TABLES;
 /*!50003 SET collation_connection  = cp850_general_ci */ ;
 /*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
 /*!50003 SET sql_mode              = 'ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION' */ ;
-DELIMITER ;;
-/*!50003 CREATE*/ /*!50017 DEFINER=`root`@`localhost`*/ /*!50003 TRIGGER `create_ratings_for_stop` AFTER INSERT ON `bus_stop` FOR EACH ROW BEGIN
-		INSERT INTO ratings (stop_id, type)
-		VALUES (NEW.stop_id, 'noise');
-		INSERT INTO ratings (stop_id, type)
-		VALUES (NEW.stop_id, 'cleanliness');
-END */;;
-DELIMITER ;
 /*!50003 SET sql_mode              = @saved_sql_mode */ ;
 /*!50003 SET character_set_client  = @saved_cs_client */ ;
 /*!50003 SET character_set_results = @saved_cs_results */ ;
@@ -87,20 +79,6 @@ DELIMITER ;
 /*!50003 SET collation_connection  = cp850_general_ci */ ;
 /*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
 /*!50003 SET sql_mode              = 'ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION' */ ;
-DELIMITER ;;
-/*!50003 CREATE*/ /*!50017 DEFINER=`root`@`localhost`*/ /*!50003 TRIGGER `create_stop_accessibility` AFTER INSERT ON `bus_stop` FOR EACH ROW BEGIN
-		INSERT INTO tf_accessibility (stop_id, name)
-		VALUES (NEW.stop_id, 'wheelchair');
-		INSERT INTO tf_accessibility (stop_id, name)
-		VALUES (NEW.stop_id, 'shelter');
-		INSERT INTO tf_accessibility (stop_id, name)
-		VALUES (NEW.stop_id, 'trashcan');
-		INSERT INTO tf_accessibility (stop_id, name)
-		VALUES (NEW.stop_id, 'seating');
-		INSERT INTO tf_accessibility (stop_id, name)
-		VALUES (NEW.stop_id, 'sidewalk');
-END */;;
-DELIMITER ;
 /*!50003 SET sql_mode              = @saved_sql_mode */ ;
 /*!50003 SET character_set_client  = @saved_cs_client */ ;
 /*!50003 SET character_set_results = @saved_cs_results */ ;
@@ -115,16 +93,8 @@ CREATE TABLE `privileged_user` (
   `user_id` int NOT NULL,
   PRIMARY KEY (`user_id`),
   CONSTRAINT `privileged_user_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`)
-) 
-
---
--- Dumping data for table `privileged_user`
---
-
-LOCK TABLES `privileged_user` WRITE;
-/*!40000 ALTER TABLE `privileged_user` DISABLE KEYS */;
-/*!40000 ALTER TABLE `privileged_user` ENABLE KEYS */;
-UNLOCK TABLES;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Table structure for table `proposed_changes`
@@ -146,16 +116,8 @@ CREATE TABLE `proposed_changes` (
   CONSTRAINT `proposed_changes_ibfk_1` FOREIGN KEY (`stop_id`) REFERENCES `bus_stop` (`stop_id`),
   CONSTRAINT `proposed_changes_ibfk_2` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`),
   CONSTRAINT `proposed_changes_ibfk_3` FOREIGN KEY (`reviewed_by`) REFERENCES `privileged_user` (`user_id`)
-)
-
---
--- Dumping data for table `proposed_changes`
---
-
-LOCK TABLES `proposed_changes` WRITE;
-/*!40000 ALTER TABLE `proposed_changes` DISABLE KEYS */;
-/*!40000 ALTER TABLE `proposed_changes` ENABLE KEYS */;
-UNLOCK TABLES;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Table structure for table `ratings`
@@ -175,15 +137,6 @@ CREATE TABLE `ratings` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `ratings`
---
-
-LOCK TABLES `ratings` WRITE;
-/*!40000 ALTER TABLE `ratings` DISABLE KEYS */;
-/*!40000 ALTER TABLE `ratings` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `route_stops`
 --
 DROP TABLE IF EXISTS `route_stops`;
@@ -196,16 +149,8 @@ CREATE TABLE `route_stops` (
   KEY `FK_route` (`route_id`),
   CONSTRAINT `FK_route` FOREIGN KEY (`route_id`) REFERENCES `bus_route` (`route_id`),
   CONSTRAINT `FK_stop` FOREIGN KEY (`stop_id`) REFERENCES `bus_stop` (`stop_id`)
-) 
-
---
--- Dumping data for table `route_stops`
---
-
-LOCK TABLES `route_stops` WRITE;
-/*!40000 ALTER TABLE `route_stops` DISABLE KEYS */;
-/*!40000 ALTER TABLE `route_stops` ENABLE KEYS */;
-UNLOCK TABLES;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Table structure for table `tf_accessibility`
@@ -219,16 +164,8 @@ CREATE TABLE `tf_accessibility` (
   `updated_at` datetime DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`stop_id`,`name`),
   CONSTRAINT `tf_accessibility_ibfk_1` FOREIGN KEY (`stop_id`) REFERENCES `bus_stop` (`stop_id`)
-) 
-
---
--- Dumping data for table `tf_accessibility`
---
-
-LOCK TABLES `tf_accessibility` WRITE;
-/*!40000 ALTER TABLE `tf_accessibility` DISABLE KEYS */;
-/*!40000 ALTER TABLE `tf_accessibility` ENABLE KEYS */;
-UNLOCK TABLES;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Table structure for table `user`
@@ -241,16 +178,8 @@ CREATE TABLE `user` (
   `password` varchar(25) DEFAULT NULL,
   PRIMARY KEY (`user_id`),
   UNIQUE KEY `email` (`email`)
-) 
-
---
--- Dumping data for table `user`
---
-
-LOCK TABLES `user` WRITE;
-/*!40000 ALTER TABLE `user` DISABLE KEYS */;
-/*!40000 ALTER TABLE `user` ENABLE KEYS */;
-UNLOCK TABLES;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
