@@ -1,0 +1,28 @@
+position_index,route_id,route_name,stop_name,name,value
+1,21-VIC,21: Interurban / Downtown,Camosun Interurban Loop,wheelchair,NULL
+2,21-VIC,21: Interurban / Downtown,Interurban Rd at Hector Rd,wheelchair,NULL
+3,21-VIC,21: Interurban / Downtown,Interurban Rd at Alan Rd,wheelchair,NULL
+4,21-VIC,21: Interurban / Downtown,Interurban Rd at Charlton Rd,wheelchair,NULL
+5,21-VIC,21: Interurban / Downtown,Interurban Rd at Dunsterville Ave,wheelchair,NULL
+6,21-VIC,21: Interurban / Downtown,Interurban Rd at Wilkinson Rd,wheelchair,NULL
+7,21-VIC,21: Interurban / Downtown,Interurban Rd at Meadowview Pl,wheelchair,NULL
+8,21-VIC,21: Interurban / Downtown,Interurban Rd at Grange Rd,wheelchair,NULL
+9,21-VIC,21: Interurban / Downtown,Interurban Rd at Edge Pl,wheelchair,NULL
+10,21-VIC,21: Interurban / Downtown,Interurban Rd at Marigold Rd,wheelchair,NULL
+11,21-VIC,21: Interurban / Downtown,Interurban Rd at Columbine Way,wheelchair,NULL
+12,21-VIC,21: Interurban / Downtown,Burnside Rd W at Interurban Rd,wheelchair,NULL
+13,21-VIC,21: Interurban / Downtown,Burnside Rd W at Tillicum Rd,wheelchair,NULL
+14,21-VIC,21: Interurban / Downtown,Burnside Rd W at Albina St,wheelchair,NULL
+15,21-VIC,21: Interurban / Downtown,Burnside Rd W at Millgrove St,wheelchair,NULL
+16,21-VIC,21: Interurban / Downtown,Burnside Rd W at Wascana St,wheelchair,1
+17,21-VIC,21: Interurban / Downtown,Burnside Rd E at Harriet Rd,wheelchair,NULL
+18,21-VIC,21: Interurban / Downtown,Burnside Rd E at Balfour Ave,wheelchair,NULL
+19,21-VIC,21: Interurban / Downtown,Burnside Rd E at Washington Ave,wheelchair,NULL
+20,21-VIC,21: Interurban / Downtown,Burnside Rd E at Napier Lane,wheelchair,NULL
+21,21-VIC,21: Interurban / Downtown,Burnside Rd E at Jutland Rd,wheelchair,NULL
+22,21-VIC,21: Interurban / Downtown,Burnside Rd E at Dunedin St,wheelchair,NULL
+23,21-VIC,21: Interurban / Downtown,Douglas St at Gorge Rd E / Hillside Ave,wheelchair,NULL
+24,21-VIC,21: Interurban / Downtown,Douglas St at Bay St,wheelchair,1
+25,21-VIC,21: Interurban / Downtown,Douglas St at Discovery St,wheelchair,NULL
+26,21-VIC,21: Interurban / Downtown,Douglas St at Pandora Ave,wheelchair,NULL
+27,21-VIC,21: Interurban / Downtown,Douglas St at View St,wheelchair,NULL
