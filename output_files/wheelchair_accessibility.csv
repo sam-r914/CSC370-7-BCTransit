@@ -1,0 +1,332 @@
+stop_id,stop_name,name,value,updated_at
+100002,Legislature Exch,wheelchair,1,2026-10-17 02:37:37
+100009,Hwy 17 at Elk Lake Dr,wheelchair,1,2026-10-17 02:37:37
+100016,Sooke Rd at Brownsey Blvd,wheelchair,1,2026-10-17 02:37:37
+100030,Oswego St at Michigan St,wheelchair,1,2026-10-17 02:37:37
+100037,Douglas St at Avalon Rd,wheelchair,1,2026-10-17 02:37:37
+100044,Oswego St at St James St,wheelchair,1,2026-10-17 02:37:37
+100051,Douglas St at Johnson St,wheelchair,1,2026-10-17 02:37:37
+100058,Niagara St at Clarence St,wheelchair,1,2026-10-17 02:37:37
+100065,Niagara St at Government St,wheelchair,1,2026-10-17 02:37:37
+100072,Niagara St at Government St,wheelchair,1,2026-10-17 02:37:37
+100079,Johnson St at Blanshard St,wheelchair,1,2026-10-17 02:37:37
+100086,Erie St at Dallas Rd - Fisherman's Wharf,wheelchair,1,2026-10-17 02:37:37
+100093,Johnson St at Quadra St,wheelchair,1,2026-10-17 02:37:37
+100100,Cook St at Fairfield Rd,wheelchair,1,2026-10-17 02:37:37
+100121,Cook St at Rockland Ave,wheelchair,1,2026-10-17 02:37:37
+100128,Cook St at Fort St,wheelchair,1,2026-10-17 02:37:37
+100149,Tyee Rd at Wilson St,wheelchair,1,2026-10-17 02:37:37
+100156,May St at Linden Ave,wheelchair,1,2026-10-17 02:37:37
+100163,May St at Wellington Ave,wheelchair,1,2026-10-17 02:37:37
+100170,Bay St at Turner St,wheelchair,1,2026-10-17 02:37:37
+100177,Douglas St at Bay St,wheelchair,1,2026-10-17 02:37:37
+100184,May St at Moss St,wheelchair,1,2026-10-17 02:37:37
+100191,Yates St at Fernwood Rd,wheelchair,1,2026-10-17 02:37:37
+100198,Douglas St at Kings Rd,wheelchair,1,2026-10-17 02:37:37
+100205,Fairfield Rd at Kipling St,wheelchair,1,2026-10-17 02:37:37
+100212,Fort St at Elford St,wheelchair,1,2026-10-17 02:37:37
+100219,Skinner St at Catherine St,wheelchair,1,2026-10-17 02:37:37
+100226,Cook St at Bay St,wheelchair,1,2026-10-17 02:37:37
+100233,Quadra St at Kings Rd,wheelchair,1,2026-10-17 02:37:37
+100247,Strandlund Ave at Peatt Rd,wheelchair,1,2026-10-17 02:37:37
+100254,Gorge Rd E at Garbally Rd,wheelchair,1,2026-10-17 02:37:37
+100261,Hillside Ave at Quadra St,wheelchair,1,2026-10-17 02:37:37
+100268,Head St at Paradise St,wheelchair,1,2026-10-17 02:37:37
+100275,Dunsmuir Rd at Head St,wheelchair,1,2026-10-17 02:37:37
+100296,Pandora Ave at Fort St,wheelchair,1,2026-10-17 02:37:37
+100303,Fairfield Rd at St Charles St,wheelchair,1,2026-10-17 02:37:37
+100310,Craigflower Rd at Alderman Rd,wheelchair,1,2026-10-17 02:37:37
+100317,Oak Bay Ave at Fort St,wheelchair,1,2026-10-17 02:37:37
+100324,Lyall St at MacAulay St,wheelchair,1,2026-10-17 02:37:37
+100338,Craigflower Rd at Dominion Rd,wheelchair,1,2026-10-17 02:37:37
+100345,Fairfield Rd at Lillian Rd,wheelchair,1,2026-10-17 02:37:37
+100359,Finlayson St at Blanshard St,wheelchair,1,2026-10-17 02:37:37
+100366,Lampson St at Fernhill Rd,wheelchair,1,2026-10-17 02:37:37
+100373,Lampson St at Lyall St,wheelchair,1,2026-10-17 02:37:37
+100380,Burnside Rd E at Alpha St,wheelchair,1,2026-10-17 02:37:37
+100387,Esquimalt Rd at Lampson St West Side,wheelchair,1,2026-10-17 02:37:37
+100394,Douglas St at Herald St,wheelchair,1,2026-10-17 02:37:37
+100401,Quadra St at Finlayson St,wheelchair,1,2026-10-17 02:37:37
+100408,Lampson St at Wurtele Pl,wheelchair,1,2026-10-17 02:37:37
+100415,Munro St at Kinver St,wheelchair,1,2026-10-17 02:37:37
+100422,Finlayson St at Somerset St,wheelchair,1,2026-10-17 02:37:37
+100429,William Head Rd at Pearson College Dr,wheelchair,1,2026-10-17 02:37:37
+100436,Foul Bay Rd at Fairfield Rd,wheelchair,1,2026-10-17 02:37:37
+100443,Cook St at Mallek Cres,wheelchair,1,2026-10-17 02:37:37
+100450,Shelbourne St at Haultain St,wheelchair,1,2026-10-17 02:37:37
+100457,Craigflower Rd at Lampson St,wheelchair,1,2026-10-17 02:37:37
+100464,Colville Rd at MacLeod Ave,wheelchair,1,2026-10-17 02:37:37
+100471,Esquimalt Rd at Fraser St,wheelchair,1,2026-10-17 02:37:37
+100478,Fraser St at Wychbury Ave,wheelchair,1,2026-10-17 02:37:37
+100485,Shelbourne St at Kings Rd,wheelchair,1,2026-10-17 02:37:37
+100492,Craigflower Rd at Tillicum Rd,wheelchair,1,2026-10-17 02:37:37
+100499,Cedar Hill Rd at Lang St,wheelchair,1,2026-10-17 02:37:37
+100506,Richmond Rd at Haultain St,wheelchair,1,2026-10-17 02:37:37
+100513,Cook St at Slater St,wheelchair,1,2026-10-17 02:37:37
+100520,Quadra St at Inverness Rd,wheelchair,1,2026-10-17 02:37:37
+100527,Burnside Rd W at Wascana St,wheelchair,1,2026-10-17 02:37:37
+100534,Boleskine Rd at Whittier Ave,wheelchair,1,2026-10-17 02:37:37
+100541,Finlayson St at Cedar Hill Rd,wheelchair,1,2026-10-17 02:37:37
+100548,Finlayson St at Cedar Hill Rd,wheelchair,1,2026-10-17 02:37:37
+100562,Gorge Rd W at Tillicum Rd,wheelchair,1,2026-10-17 02:37:37
+100569,Gorge Rd W at Tillicum Rd,wheelchair,1,2026-10-17 02:37:37
+100576,Tillicum Rd at Gorge Rd W,wheelchair,1,2026-10-17 02:37:37
+100583,Victoria Ave at McNeill Ave,wheelchair,1,2026-10-17 02:37:37
+100590,Shelbourne St at Hillside Ave,wheelchair,1,2026-10-17 02:37:37
+100597,Esquimalt Rd at Foster St,wheelchair,1,2026-10-17 02:37:37
+100604,Obed Ave at Tillicum Rd,wheelchair,1,2026-10-17 02:37:37
+100611,North Dairy Rd at Keats St,wheelchair,1,2026-10-17 02:37:37
+100618,Lansdowne Rd at Shelbourne St,wheelchair,1,2026-10-17 02:37:37
+100625,Foul Bay Rd at Kings Rd,wheelchair,1,2026-10-17 02:37:37
+100632,Oak Bay Ave at Hampshire Rd,wheelchair,1,2026-10-17 02:37:37
+100639,Cadboro Bay Rd at Epworth St,wheelchair,1,2026-10-17 02:37:37
+100646,Richmond Rd at Forrester St,wheelchair,1,2026-10-17 02:37:37
+100653,Lansdowne Rd at Richmond Rd,wheelchair,1,2026-10-17 02:37:37
+100660,Westhills Exch Bay C,wheelchair,1,2026-10-17 02:37:37
+100674,Monterey Ave at Woodlawn Cres,wheelchair,1,2026-10-17 02:37:37
+100681,Foul Bay Rd at Neil St,wheelchair,1,2026-10-17 02:37:37
+100688,Maplewood Rd at Pike St,wheelchair,1,2026-10-17 02:37:37
+100695,Gorge Rd W at Dysart Rd,wheelchair,1,2026-10-17 02:37:37
+100702,Foul Bay Rd at Forrester St,wheelchair,1,2026-10-17 02:37:37
+100716,Burnside Rd W at Interurban Rd,wheelchair,1,2026-10-17 02:37:37
+100737,Cadboro Bay Rd at Tod Rd,wheelchair,1,2026-10-17 02:37:37
+100744,Cowper St at Dysart Rd,wheelchair,1,2026-10-17 02:37:37
+100758,Cadboro Bay Rd at Pacific Ave,wheelchair,1,2026-10-17 02:37:37
+100765,Newport Ave at Windsor Rd,wheelchair,1,2026-10-17 02:37:37
+100772,Cowper St at Austin Ave,wheelchair,1,2026-10-17 02:37:37
+100779,Gorge Rd W at Colquitz Ave,wheelchair,1,2026-10-17 02:37:37
+100786,Central Ave at Newport Ave,wheelchair,1,2026-10-17 02:37:37
+100793,Richmond Rd at Mayfair Dr,wheelchair,1,2026-10-17 02:37:37
+100800,Oak Bay Marina,wheelchair,1,2026-10-17 02:37:37
+100807,Thompson Ave at Musgrave St,wheelchair,1,2026-10-17 02:37:37
+100814,Beach Dr at Dalhousie St,wheelchair,1,2026-10-17 02:37:37
+100821,Estevan Ave at Dunlevy St,wheelchair,1,2026-10-17 02:37:37
+100828,Quadra St at Hulford St,wheelchair,1,2026-10-17 02:37:37
+100835,Blenkinsop Rd at Union Rd,wheelchair,1,2026-10-17 02:37:37
+100842,Veterans Memorial Pky at Langford Pky,wheelchair,1,2026-10-17 02:37:37
+100849,Admirals Rd at Gorge Rd W,wheelchair,1,2026-10-17 02:37:37
+100856,Craigflower Rd at Admirals Rd,wheelchair,1,2026-10-17 02:37:37
+100863,Cedar Hill Rd at Cedar Hill X Rd,wheelchair,1,2026-10-17 02:37:37
+100870,Nottingham Rd at Dorset Rd,wheelchair,1,2026-10-17 02:37:37
+100877,McKenzie Ave at Hwy 17 West Side,wheelchair,1,2026-10-17 02:37:37
+100884,McKenzie Ave at Willowbrook Pl,wheelchair,1,2026-10-17 02:37:37
+100891,Saanich Rd at McKenzie Ave,wheelchair,1,2026-10-17 02:37:37
+100898,Shelbourne St at Broadmead Ave,wheelchair,1,2026-10-17 02:37:37
+100905,Superior St at Oswego St,wheelchair,1,2026-10-17 02:37:37
+100912,Cotswold Rd at Uplands Rd,wheelchair,1,2026-10-17 02:37:37
+100919,McKenzie Ave at Quadra St,wheelchair,1,2026-10-17 02:37:37
+100926,McKenzie Ave at Borden St,wheelchair,1,2026-10-17 02:37:37
+100933,Shelbourne St at Mortimer St,wheelchair,1,2026-10-17 02:37:37
+100940,Glanford Ave at Kenneth St,wheelchair,1,2026-10-17 02:37:37
+100947,Lansdowne Rd at Ripon Rd,wheelchair,1,2026-10-17 02:37:37
+100954,Douglas St at Superior St,wheelchair,1,2026-10-17 02:37:37
+100961,Blenkinsop Rd at Lonsdale Pl,wheelchair,1,2026-10-17 02:37:37
+100968,Midland Rd at Ripon Rd,wheelchair,1,2026-10-17 02:37:37
+100975,McKenzie Ave at Braefoot Rd,wheelchair,1,2026-10-17 02:37:37
+100982,McKenzie Ave at Braefoot Elementary,wheelchair,1,2026-10-17 02:37:37
+100989,Burnside Rd W at Wilkinson Rd,wheelchair,1,2026-10-17 02:37:37
+100996,Douglas St at Rogers Ave,wheelchair,1,2026-10-17 02:37:37
+101003,Cedar Hill Rd at Hopesmore Dr,wheelchair,1,2026-10-17 02:37:37
+101010,Glanford Ave at Baker St,wheelchair,1,2026-10-17 02:37:37
+101017,Wilkinson Rd at South Valley Dr,wheelchair,1,2026-10-17 02:37:37
+101024,Beach Dr at Cadboro Bay Rd,wheelchair,1,2026-10-17 02:37:37
+101031,Helmcken Rd at Parkcrest Dr,wheelchair,1,2026-10-17 02:37:37
+101038,Burnside Rd W at Eaton Ave,wheelchair,1,2026-10-17 02:37:37
+101045,Blair Ave at Magdelin St,wheelchair,1,2026-10-17 02:37:37
+101052,Helmcken Rd at Hwy 1 South Side,wheelchair,1,2026-10-17 02:37:37
+101059,Carey Rd at Roy Rd,wheelchair,1,2026-10-17 02:37:37
+101066,Blair Ave at Carnegie Cres,wheelchair,1,2026-10-17 02:37:37
+101073,Wilkinson Rd at Helen Rd,wheelchair,1,2026-10-17 02:37:37
+101080,Watkiss Way at Helmcken Rd,wheelchair,1,2026-10-17 02:37:37
+101087,Glanford Ave at Leaside Ave,wheelchair,1,2026-10-17 02:37:37
+101094,Holland Ave at Helmcken Rd,wheelchair,1,2026-10-17 02:37:37
+101108,Feltham Rd at Larchwood Dr,wheelchair,1,2026-10-17 02:37:37
+101122,Cedar Hill Rd at Cedarglen Rd,wheelchair,1,2026-10-17 02:37:37
+101129,Gordon Head Rd at Laval Ave,wheelchair,1,2026-10-17 02:37:37
+101136,Interurban Rd at Wilkinson Rd,wheelchair,1,2026-10-17 02:37:37
+101143,Hospital Way at Watkiss Way,wheelchair,1,2026-10-17 02:37:37
+101150,Holland Ave at Blue Ridge Rd,wheelchair,1,2026-10-17 02:37:37
+101157,Finnerty Rd at Edgelow St,wheelchair,1,2026-10-17 02:37:37
+101164,Quadra St at Chatterton Way,wheelchair,1,2026-10-17 02:37:37
+101171,Hastings St at Santa Anita Ave,wheelchair,1,2026-10-17 02:37:37
+101178,West Shore Pky at Bombardier Cres,wheelchair,1,2026-10-17 02:37:37
+101185,West Shore Pky at Commander Crt,wheelchair,1,2026-10-17 02:37:37
+101192,Hastings St at Delmar Ave,wheelchair,1,2026-10-17 02:37:37
+101199,Vanalman Ave at Parkridge St,wheelchair,1,2026-10-17 02:37:37
+101206,Arbutus Rd at Rowley Rd,wheelchair,1,2026-10-17 02:37:37
+101213,Kenmore Rd at Torquay Dr,wheelchair,1,2026-10-17 02:37:37
+101220,Tyndall Ave at San Pedro Ave,wheelchair,1,2026-10-17 02:37:37
+101227,Watkiss Way at Creed Rd,wheelchair,1,2026-10-17 02:37:37
+101234,4400 Blk Chatterton Way,wheelchair,1,2026-10-17 02:37:37
+101241,Colwood Exch (Island Hwy) Bay E,wheelchair,1,2026-10-17 02:37:37
+101248,Majestic Dr at Prairie St,wheelchair,1,2026-10-17 02:37:37
+101255,Sooke Rd at Goldstream Ave,wheelchair,1,2026-10-17 02:37:37
+101262,Island Hwy at Six Mile Rd,wheelchair,1,2026-10-17 02:37:37
+101276,Milburn Dr at Hockering Rd,wheelchair,1,2026-10-17 02:37:37
+101283,Vanalman Ave at Mann Ave,wheelchair,1,2026-10-17 02:37:37
+101290,San Juan Ave at Gordon Head Rd,wheelchair,1,2026-10-17 02:37:37
+101297,Emily Carr Dr at Owlwood Pl,wheelchair,1,2026-10-17 02:37:37
+101304,Atkins Ave at Traverse Terr,wheelchair,1,2026-10-17 02:37:37
+101311,Atkins Rd at Six Mile Rd,wheelchair,1,2026-10-17 02:37:37
+101318,W Saanich Rd at Royal Oak Shopping Ctr,wheelchair,1,2026-10-17 02:37:37
+101325,Sooke Rd at Aldeane Ave,wheelchair,1,2026-10-17 02:37:37
+101332,Gordon Head Rd at Sage Lane,wheelchair,1,2026-10-17 02:37:37
+101339,Metchosin Rd at Benhomer Dr,wheelchair,1,2026-10-17 02:37:37
+101346,Majestic Dr at Ash Rd,wheelchair,1,2026-10-17 02:37:37
+101353,Chatterton Way at Broadmead Village,wheelchair,1,2026-10-17 02:37:37
+101360,Wilkinson Rd at Greenlea Dr,wheelchair,1,2026-10-17 02:37:37
+101367,Ash Rd at Bissenden Pl,wheelchair,1,2026-10-17 02:37:37
+101374,Atkins Ave at Crystalview Dr,wheelchair,1,2026-10-17 02:37:37
+101381,Royal Oak Dr at Falaise Cres,wheelchair,1,2026-10-17 02:37:37
+101388,Metchosin Rd at Terrahue Rd,wheelchair,1,2026-10-17 02:37:37
+101395,Markham St at VI Tech Park,wheelchair,1,2026-10-17 02:37:37
+101402,Royal Oak Dr at Falaise Dr,wheelchair,1,2026-10-17 02:37:37
+101409,Painter Rd at Benhomer Dr,wheelchair,1,2026-10-17 02:37:37
+101416,Royal Oak Exch Bay E,wheelchair,1,2026-10-17 02:37:37
+101423,Ferndale Rd at Pauls Terr,wheelchair,1,2026-10-17 02:37:37
+101437,Sooke Rd at Ledsham Rd,wheelchair,1,2026-10-17 02:37:37
+101444,Wishart Rd at Tipton Ave,wheelchair,1,2026-10-17 02:37:37
+101451,Metchosin Rd at Farhill Rd,wheelchair,1,2026-10-17 02:37:37
+101458,Dressler Rd at Wishart Rd,wheelchair,1,2026-10-17 02:37:37
+101472,Royal Oak Dr at Firbank Lane,wheelchair,1,2026-10-17 02:37:37
+101479,Metchosin Rd at Sooke Rd,wheelchair,1,2026-10-17 02:37:37
+101486,Kelly Rd at Metchosin Rd,wheelchair,1,2026-10-17 02:37:37
+101493,Interurban Rd at Viaduct Ave W,wheelchair,1,2026-10-17 02:37:37
+101500,Quayle Rd at Beaver Rd,wheelchair,1,2026-10-17 02:37:37
+101507,Goldstream Ave at Veterans Memorial Pky,wheelchair,1,2026-10-17 02:37:37
+101514,Cordova Bay Rd at Timber Lane,wheelchair,1,2026-10-17 02:37:37
+101521,Veterans Memorial Pky at Wagar Ave,wheelchair,1,2026-10-17 02:37:37
+101528,Quayle Rd at Elk Rd,wheelchair,1,2026-10-17 02:37:37
+101535,Veterans Memorial Pky at Marlisa Pl,wheelchair,1,2026-10-17 02:37:37
+101542,Langford Exch Bay C,wheelchair,1,2026-10-17 02:37:37
+101549,Langford Pky at City Centre Park,wheelchair,1,2026-10-17 02:37:37
+101556,Langford Pky at City Centre Park,wheelchair,1,2026-10-17 02:37:37
+101563,3700 Blk Duke Rd E,wheelchair,1,2026-10-17 02:37:37
+101570,Latoria Rd at Veterans Memorial Pky,wheelchair,1,2026-10-17 02:37:37
+101577,Treanor Ave at Cottier Pl,wheelchair,1,2026-10-17 02:37:37
+101591,3800 Blk Duke Rd E,wheelchair,1,2026-10-17 02:37:37
+101612,Latoria Rd at Castlewood Rd,wheelchair,1,2026-10-17 02:37:37
+101619,Duke Rd E at Gilbert Dr,wheelchair,1,2026-10-17 02:37:37
+101626,Langford Pky at Langford Lake Rd W,wheelchair,1,2026-10-17 02:37:37
+101633,W Saanich Rd at Interurban Rd,wheelchair,1,2026-10-17 02:37:37
+101640,Jacklin Rd at Terlane Pl,wheelchair,1,2026-10-17 02:37:37
+101647,Latoria Rd at Joy Close,wheelchair,1,2026-10-17 02:37:37
+101654,Jacklin Rd at Sunridge Valley Dr,wheelchair,1,2026-10-17 02:37:37
+101661,Cordova Bay Rd at Haliburton Rd,wheelchair,1,2026-10-17 02:37:37
+101668,Goldstream Ave at Spencer Rd,wheelchair,1,2026-10-17 02:37:37
+101675,Jacklin Rd at Walfred Rd,wheelchair,1,2026-10-17 02:37:37
+101682,Millstream Rd at Gardner Creek,wheelchair,1,2026-10-17 02:37:37
+101689,Jenkins Ave at Hull Rd,wheelchair,1,2026-10-17 02:37:37
+101703,Millstream Rd at Bear Mountain Pky,wheelchair,1,2026-10-17 02:37:37
+101710,Jenkins Ave at Haslam Ave,wheelchair,1,2026-10-17 02:37:37
+101717,Setchfield Ave at Treanor Ave,wheelchair,1,2026-10-17 02:37:37
+101724,Sooke Rd at Happy Valley Rd,wheelchair,1,2026-10-17 02:37:37
+101731,Glen Lake Rd at Page Ave,wheelchair,1,2026-10-17 02:37:37
+101738,Bear Mountain Pky at Echo Valley Dr,wheelchair,1,2026-10-17 02:37:37
+101745,Glen Lake Rd at Springhill Rd,wheelchair,1,2026-10-17 02:37:37
+101752,Glen Lake Rd at Glenview Pl,wheelchair,1,2026-10-17 02:37:37
+101773,Sooke Rd at Penwood Rd,wheelchair,1,2026-10-17 02:37:37
+101780,Metchosin Rd at Witty Beach Rd,wheelchair,1,2026-10-17 02:37:37
+101787,Goldstream Ave at Lakeshore Pl,wheelchair,1,2026-10-17 02:37:37
+101794,Metchosin Rd at Wootton Rd,wheelchair,1,2026-10-17 02:37:37
+101801,Sooke Rd at Chidlow Connector,wheelchair,1,2026-10-17 02:37:37
+101808,W Saanich Rd at Hartland Ave,wheelchair,1,2026-10-17 02:37:37
+101815,Sooke Rd at Awsworth Rd,wheelchair,1,2026-10-17 02:37:37
+101822,Sooke Rd at Awsworth Rd,wheelchair,1,2026-10-17 02:37:37
+101829,Happy Valley Rd at Neild Rd,wheelchair,1,2026-10-17 02:37:37
+101836,4300 Blk Happy Valley Rd,wheelchair,1,2026-10-17 02:37:37
+101843,Happy Valley Rd at Bennett Rd,wheelchair,1,2026-10-17 02:37:37
+101850,2900 Blk Amy Rd,wheelchair,1,2026-10-17 02:37:37
+101857,W Saanich Rd at Wallace Dr,wheelchair,1,2026-10-17 02:37:37
+101871,William Head Rd at Lombard Dr,wheelchair,1,2026-10-17 02:37:37
+101878,5800 Blk W Saanich Rd,wheelchair,1,2026-10-17 02:37:37
+101885,Tanner Rd at Marie Meadows Rd,wheelchair,1,2026-10-17 02:37:37
+101892,W Saanich Rd at Glen Nevis Rd,wheelchair,1,2026-10-17 02:37:37
+101899,6100 Blk W Saanich Rd,wheelchair,1,2026-10-17 02:37:37
+101906,Central Saanich Rd at Keating X Rd,wheelchair,1,2026-10-17 02:37:37
+101920,Keating X Rd at Butler Cres,wheelchair,1,2026-10-17 02:37:37
+101934,Benvenuto Ave at Trudeau Terr,wheelchair,1,2026-10-17 02:37:37
+101941,Wallace Dr at Benvenuto Ave,wheelchair,1,2026-10-17 02:37:37
+101948,W Saanich Rd at Carriage Lane,wheelchair,1,2026-10-17 02:37:37
+101955,E Saanich Rd at Stellys X Rd,wheelchair,1,2026-10-17 02:37:37
+101962,Wallace Dr at Springside Pl,wheelchair,1,2026-10-17 02:37:37
+101969,Wallace Dr at Stelly's Secondary,wheelchair,1,2026-10-17 02:37:37
+101976,3900 Blk Wilkinson Rd,wheelchair,1,2026-10-17 02:37:37
+101983,Brentwood Dr at Marchant Rd,wheelchair,1,2026-10-17 02:37:37
+101990,Wallace Dr at White Rd,wheelchair,1,2026-10-17 02:37:37
+101997,Canora Rd at De Havilland Way,wheelchair,1,2026-10-17 02:37:37
+102011,E Saanich Rd at Veyaness Rd,wheelchair,1,2026-10-17 02:37:37
+102018,McTavish Exch Bay C,wheelchair,1,2026-10-17 02:37:37
+102025,E Saanich Rd at Hovey Rd,wheelchair,1,2026-10-17 02:37:37
+102032,McTavish Exch Bay F,wheelchair,1,2026-10-17 02:37:37
+102046,Mt Newton X Rd at Central Saanich Rd,wheelchair,1,2026-10-17 02:37:37
+102067,Saanich Pen Hosp Main Entrance,wheelchair,1,2026-10-17 02:37:37
+102074,Lochside Dr at James Island Rd,wheelchair,1,2026-10-17 02:37:37
+102081,5200 Blk Sooke Rd,wheelchair,1,2026-10-17 02:37:37
+102088,Gillespie Rd at Mount Matheson Rd,wheelchair,1,2026-10-17 02:37:37
+102095,Sunriver Way at Riverstone Dr,wheelchair,1,2026-10-17 02:37:37
+102102,Sooke Rd at Ludlow Rd,wheelchair,1,2026-10-17 02:37:37
+102109,Sooke Rd at Laidlaw Rd,wheelchair,1,2026-10-17 02:37:37
+102116,E Sooke Rd at Boardman Lane,wheelchair,1,2026-10-17 02:37:37
+102130,Lochside Dr at Lowe Rd,wheelchair,1,2026-10-17 02:37:37
+102137,Lochside Dr at Lowe Rd,wheelchair,1,2026-10-17 02:37:37
+102144,E Saanich Rd at CFIA Laboratory,wheelchair,1,2026-10-17 02:37:37
+102151,Forest Park Dr at Mayneview Terr,wheelchair,1,2026-10-17 02:37:37
+102158,E Saanich Rd at Bazan Bay Rd,wheelchair,1,2026-10-17 02:37:37
+102165,W Saanich Rd at Theh Le Lum Lane,wheelchair,1,2026-10-17 02:37:37
+102172,Haliburton Rd at Del Monte Ave,wheelchair,1,2026-10-17 02:37:37
+102179,McKenzie Ave at Hwy 1,wheelchair,1,2026-10-17 02:37:37
+102186,Andover Rd at Copper Mine Rd,wheelchair,1,2026-10-17 02:37:37
+102193,Six Mile Rd at Nursery Hill Dr,wheelchair,1,2026-10-17 02:37:37
+102200,Lochside Dr at Captains Walk,wheelchair,1,2026-10-17 02:37:37
+102207,Lochside Dr at Frost Ave,wheelchair,1,2026-10-17 02:37:37
+102214,Sooke Rd at Lazzar Rd - Sooke P&R,wheelchair,1,2026-10-17 02:37:37
+102221,Fifth St at Weiler Ave,wheelchair,1,2026-10-17 02:37:37
+102228,Fifth St at Ocean Ave,wheelchair,1,2026-10-17 02:37:37
+102235,Sooke Rd at Belvista Pl,wheelchair,1,2026-10-17 02:37:37
+102242,Sunriver Way at DeMamiel Dr,wheelchair,1,2026-10-17 02:37:37
+102249,Fifth St at Beacon Ave - Sidney Town Ctr,wheelchair,1,2026-10-17 02:37:37
+102256,W Saanich Rd at Ardmore Dr,wheelchair,1,2026-10-17 02:37:37
+102270,Sooke Rd at Church Rd,wheelchair,1,2026-10-17 02:37:37
+102277,Bowerbank Rd at Mills Rd,wheelchair,1,2026-10-17 02:37:37
+102284,Mills Rd at Avenger Way,wheelchair,1,2026-10-17 02:37:37
+102291,Resthaven Dr at Amelia Ave,wheelchair,1,2026-10-17 02:37:37
+102298,Mills Rd at W Saanich Rd,wheelchair,1,2026-10-17 02:37:37
+102305,Bowerbank Rd at Vallis Pl,wheelchair,1,2026-10-17 02:37:37
+102312,Ardwell Ave at Menagh Pl,wheelchair,1,2026-10-17 02:37:37
+102319,Quartz Dr at Gatewood Rd,wheelchair,1,2026-10-17 02:37:37
+102326,Pyrite Dr at Banner Rd,wheelchair,1,2026-10-17 02:37:37
+102333,6900 Blk West Coast Rd,wheelchair,1,2026-10-17 02:37:37
+102347,Latoria Blvd at Ryder Hesjedal Way,wheelchair,1,2026-10-17 02:37:37
+102354,McDonald Park Rd at Blue Heron Rd,wheelchair,1,2026-10-17 02:37:37
+102361,Grant Rd W at Henlyn Dr,wheelchair,1,2026-10-17 02:37:37
+102368,McDonald Park Rd at Marina Way,wheelchair,1,2026-10-17 02:37:37
+102375,Downey Rd at W Saanich Rd,wheelchair,1,2026-10-17 02:37:37
+102382,Downey Rd at Madrona Dr,wheelchair,1,2026-10-17 02:37:37
+102389,W Saanich Rd at Birch Rd,wheelchair,1,2026-10-17 02:37:37
+102396,Wain Rd at Deep Cove Rd,wheelchair,1,2026-10-17 02:37:37
+102403,E Sooke Rd at Seedtree Rd,wheelchair,1,2026-10-17 02:37:37
+102410,E Sooke Rd at Whale View Cres,wheelchair,1,2026-10-17 02:37:37
+102417,UVic Exch Bay C,wheelchair,1,2026-10-17 02:37:37
+102424,Lands End Rd at Cloake Hill Rd,wheelchair,1,2026-10-17 02:37:37
+102431,1400 Blk Lands End Rd,wheelchair,1,2026-10-17 02:37:37
+102438,Kemp Lake Rd at Chubb Rd,wheelchair,1,2026-10-17 02:37:37
+102445,Langford Pky at Phipps Rd,wheelchair,1,2026-10-17 02:37:37
+102459,1400 Blk Gillespie Rd,wheelchair,1,2026-10-17 02:37:37
+102571,Gorge Rd W at Gorge View Dr,wheelchair,1,2026-10-17 02:37:37
+102585,Bear Mountain Pky at Skirt Mountain,wheelchair,1,2026-10-17 02:37:37
+102606,Richmond Rd at McRae Ave,wheelchair,1,2026-10-17 02:37:37
+102613,Happy Valley Rd at Latoria Rd,wheelchair,1,2026-10-17 02:37:37
+102641,Bear Mountain Pky at Selenite Pl,wheelchair,1,2026-10-17 02:37:37
+102655,2200 Blk Otter Point Rd,wheelchair,1,2026-10-17 02:37:37
+102697,Admirals Rd at Arundel Dr,wheelchair,1,2026-10-17 02:37:37
+102725,Hansen Ave at Sunkist Close,wheelchair,1,2026-10-17 02:37:37
+102746,Sooke Rd at Chidlow Connector,wheelchair,1,2026-10-17 02:37:37
+103726,Bay St at Douglas St,wheelchair,1,2026-10-17 02:37:37
+103733,Bay St at Cedar Hill Rd,wheelchair,1,2026-10-17 02:37:37
+103740,Bay St at Shelbourne St,wheelchair,1,2026-10-17 02:37:37
+104083,Leigh Rd at Hwy 1,wheelchair,1,2026-10-17 02:37:37
+104090,Wishart Rd at Rockwood Terr,wheelchair,1,2026-10-17 02:37:37
+104097,Sunheights Dr at Batting Pl,wheelchair,1,2026-10-17 02:37:37
+104104,Jacklin Rd at Sooke Rd,wheelchair,1,2026-10-17 02:37:37
+104111,Fairfield Rd at Blanshard St,wheelchair,1,2026-10-17 02:37:37

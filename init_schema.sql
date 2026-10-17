@@ -109,7 +109,7 @@ CREATE TABLE `route_stops` (
   `stop_id` int NOT NULL,
   `route_id` varchar(15) NOT NULL,
   `position_index` int NOT NULL,
-  PRIMARY KEY (`stop_id`,`route_id`,`position_index`),
+  PRIMARY KEY (`route_id`, `position_index`),
   KEY `FK_route` (`route_id`),
   CONSTRAINT `FK_route` FOREIGN KEY (`route_id`) REFERENCES `bus_route` (`route_id`),
   CONSTRAINT `FK_stop` FOREIGN KEY (`stop_id`) REFERENCES `bus_stop` (`stop_id`)

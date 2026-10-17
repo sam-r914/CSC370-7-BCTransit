@@ -16,12 +16,8 @@ This project intends to address the lack of easy-to-access information on the ac
     - `git clone https://github.com/sam-r914/CSC370-7-BCTransit.git`  
 3.  Open terminal in project directory  
 4.  To build the container run:  
-    -  `docker compose up -d`  
-5.  To output specific details regarding bus stops run:  
-    -  `docker compose exec data_export sh /export_tables.sh bus_stop`  
-    To output all values within bus_routes, bus_stop and route_stops run:  
-    -  `docker compose exec data_export sh /export_tables.sh`  
-6.  Database should now be deployed on your computer!  
+    -  `docker compose up -d`   
+5.  Database should now be deployed on your computer!  
 
 ## **Shut Down**  
 *To shut down the container follow these steps:*  
@@ -34,4 +30,14 @@ This project intends to address the lack of easy-to-access information on the ac
 **OR**  
 1.  Open Docker  
 2.  Navigate to container location  
-3.  Manually stop container service
+3.  Manually stop container service  
+
+## **Running SQL Scripts**  
+5.  To output all values within bus_routes, bus_stop and route_stops run:  
+    -  `docker compose exec data_export sh /export_tables.sh`  
+    To output specific details regarding bus stops run:  
+    -  `docker compose exec data_export sh /export_tables.sh bus_stop`  
+        -   This will also output a file with all wheelchair accessible bus stops  
+    To output accessibility along a specific route run:  
+    -   `docker compose exec data_export sh /export_tables.sh bus_stop [route_id]`  
+        -   To obtain route id's, look at export file for routes.  
