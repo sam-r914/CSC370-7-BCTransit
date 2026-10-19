@@ -31,6 +31,14 @@ This project intends to address the lack of easy-to-access information on the ac
 1.  Open Docker  
 2.  Navigate to container location  
 3.  Manually stop container service  
+## **Using the MySQL terminal client**
+1. Start the docker container 
+    - This will automatically create the bctransit database and populate tables
+
+2. Run `docker exec -it csc370-7-bctransit-db-1 mysql -u root -p`
+    - The root password can be found in docker-compose.yml
+
+Now you can interact with the database! On container startup, the bus_stop, bus_route, and route_stops tables are populated with actual BCTransit data. We also load some placeholder rows into the tf_accessibility and ratings tables as a proof of concept of what they would like like.
 
 ## **Running SQL Scripts**  
 5.  To output all values within bus_routes, bus_stop and route_stops run:  
