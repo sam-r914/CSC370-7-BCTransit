@@ -1,8 +1,6 @@
-/* The code below is adapted from code generated with Claude Sonnet 5.5 */
-
 USE bctransit;
 
--- 1. Staging tables (raw GTFS files) -------------------------------------
+-- 1. Temprorary tables (raw GTFS files)
 CREATE TABLE temp_stops (
   stop_id INT, stop_name VARCHAR(255),
   stop_lat DOUBLE, stop_lon DOUBLE
@@ -35,16 +33,21 @@ LOAD DATA INFILE '/var/lib/mysql-files/BCT-data/BCTstop_times.txt' INTO TABLE te
   (trip_id, @arrival_time, @departure_time, stop_id, stop_sequence,
   @shape_dist_traveled, @stop_headsign, @pickup_type, @drop_off_type, @timepoint);
 
--- 2. Insert into real tables (parents before children) -------------------
+-- 2. Insert into real tables
 INSERT INTO bus_stop (stop_id, latitude, longitude, stop_name)
-SELECT stop_id, stop_lat, stop_lon, LEFT(stop_name, 100)
+SELECT stop_id, stop_lat, stop_lon, stop_name
 FROM temp_stops;
 
 INSERT INTO bus_route (route_id, route_name)
-SELECT route_id, LEFT(CONCAT(route_short_name, ': ', route_long_name), 100)
+SELECT route_id, CONCAT(route_short_name, ': ', route_long_name)
 FROM temp_routes;
 
--- One representative trip per route (lowest trip_id)
+/* Actual bus routes have lots of possible trips they can take, and dealing with that is 
+   outside our scope, since the purpose of our project mainly deals with individual stops.
+   So we're assigning a representative trip to each route, so that we don't have to unnecessarily deal
+   with the complexity of actual bus routes, but we still have a simplified representation of
+   bus routes with bus stop ordering in case we want to add functionality related to stop ordering  in the future
+   (e.g. finding the closest stop on some route that has a desired accessibility feature). */
 CREATE TEMPORARY TABLE rep_trips AS
 SELECT route_id, MIN(trip_id) AS trip_id
 FROM temp_trips
@@ -54,9 +57,12 @@ INSERT INTO route_stops (stop_id, route_id, position_index)
 SELECT st.stop_id, rt.route_id, st.stop_sequence
 FROM temp_stop_times AS st
 JOIN rep_trips AS rt ON rt.trip_id = st.trip_id
-JOIN bus_stop  AS bs ON bs.stop_id = st.stop_id   -- guards the FK
-JOIN bus_route AS br ON br.route_id = rt.route_id; -- guards the FK
+JOIN bus_stop  AS bs ON bs.stop_id = st.stop_id 
+JOIN bus_route AS br ON br.route_id = rt.route_id;
 
--- 3. Clean up -------------------------------------------------------------
+-- 3. Clean up
 DROP TABLE temp_stops, temp_routes, temp_trips, temp_stop_times;
 
+/* This code was created with help and feedback from Claude Sonnet 5.5, mostly to deal with repetition 
+   and clarify how to work with the GTFS data format, and to reason through the validity of using this
+   representative trip method to simplify our data. */
