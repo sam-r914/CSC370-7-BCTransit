@@ -57,7 +57,6 @@ INSERT INTO route_stops (stop_id, route_id, position_index)
 SELECT st.stop_id, rt.route_id, st.stop_sequence
 FROM temp_stop_times AS st
 JOIN rep_trips AS rt ON rt.trip_id = st.trip_id
-JOIN bus_stop  AS bs ON bs.stop_id = st.stop_id 
 JOIN bus_route AS br ON br.route_id = rt.route_id;
 
 -- 3. Clean up
