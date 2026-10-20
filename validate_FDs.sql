@@ -1,3 +1,4 @@
+USE bctransit;
 -- FD 1: stop_id -> stop attributes
 -- stop_id is the primary key.
 SELECT stop_id, COUNT(*) AS occurrences
