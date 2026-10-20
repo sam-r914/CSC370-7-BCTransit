@@ -25,7 +25,7 @@ DROP TABLE IF EXISTS `bus_route`;
 CREATE TABLE `bus_route` (
   `route_id` varchar(15) NOT NULL,
   `route_length` int DEFAULT NULL,
-  `route_name` varchar(100) DEFAULT NULL,
+  `route_name` varchar(100) DEFAULT NULL UNIQUE,
   PRIMARY KEY (`route_id`)
 );
 
@@ -59,7 +59,7 @@ DROP TABLE IF EXISTS `privileged_user`;
 CREATE TABLE `privileged_user` (
   `user_id` int NOT NULL,
   PRIMARY KEY (`user_id`),
-  CONSTRAINT `privileged_user_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`)
+  CONSTRAINT `privileged_user_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
