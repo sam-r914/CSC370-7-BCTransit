@@ -45,7 +45,8 @@ Now you can interact with the database! On container startup, the bus_stop, bus_
     -  `docker compose exec data_export sh /export_tables.sh`  
     To output specific details regarding bus stops run:  
     -  `docker compose exec data_export sh /export_tables.sh bus_stop`  
-        -   This will also output a file with all wheelchair accessible bus stops  
+    To output details of all wheelchair accessible bus stops run:  
+    -  `docker compose exec data_export sh /export_tables.sh wheelchair`  
     To output accessibility along a specific route run:  
     -   `docker compose exec data_export sh /export_tables.sh bus_stop [route_id]`  
         -   To obtain route id's, look at export file for routes.  
