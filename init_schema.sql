@@ -51,6 +51,29 @@ CREATE TABLE `bus_stop` (
   PRIMARY KEY (`stop_id`)
 );
 
+DELIMITER ;;
+/*!50003 CREATE*/ /*!50017 DEFINER=`root`@`localhost`*/ /*!50003 TRIGGER `create_ratings_for_stop` AFTER INSERT ON `bus_stop` FOR EACH ROW BEGIN
+		INSERT INTO ratings (stop_id, type)
+		VALUES (NEW.stop_id, 'noise');
+		INSERT INTO ratings (stop_id, type)
+		VALUES (NEW.stop_id, 'cleanliness');
+END */;;
+DELIMITER ;
+DELIMITER ;;
+/*!50003 CREATE*/ /*!50017 DEFINER=`root`@`localhost`*/ /*!50003 TRIGGER `create_stop_accessibility` AFTER INSERT ON `bus_stop` FOR EACH ROW BEGIN
+		INSERT INTO tf_accessibility (stop_id, name)
+		VALUES (NEW.stop_id, 'wheelchair');
+		INSERT INTO tf_accessibility (stop_id, name)
+		VALUES (NEW.stop_id, 'shelter');
+		INSERT INTO tf_accessibility (stop_id, name)
+		VALUES (NEW.stop_id, 'trashcan');
+		INSERT INTO tf_accessibility (stop_id, name)
+		VALUES (NEW.stop_id, 'seating');
+		INSERT INTO tf_accessibility (stop_id, name)
+		VALUES (NEW.stop_id, 'sidewalk');
+END */;;
+DELIMITER ;
+
 --
 -- Table structure for table `privileged_user`
 --
@@ -141,4 +164,28 @@ CREATE TABLE `user` (
   PRIMARY KEY (`user_id`),
   UNIQUE KEY `email` (`email`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Dumping routines for database 'bctransit'
+--
+/*!50003 DROP PROCEDURE IF EXISTS `privileged_update_change` */;
+DELIMITER ;;
+CREATE DEFINER=`root`@`localhost` PROCEDURE `privileged_update_change`(
+		IN p_user_id INT,
+		IN p_stop_id INT,
+		IN p_new_status VARCHAR(20)
+)
+BEGIN
+		IF NOT EXISTS (
+			SELECT 1 FROM `privileged_user` WHERE `user_id` = p_user_id
+		) THEN
+			SIGNAL SQLSTATE '45000'
+			SET MESSAGE_TEXT = 'Access Denied: Only a privileged user can make changes to a proposed change.';
+		END IF;
+		UPDATE `proposed_changes`
+		SET `status` = p_new_status,
+			`reviewed_by` = p_user_id
+		WHERE `stop_id` = p_stop_id;
+END ;;
+DELIMITER ;
 
