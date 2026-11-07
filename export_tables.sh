@@ -32,22 +32,6 @@ echo 'MySQL engine is online! Checking for imported tables...'
 
         echo 'Exported Bus Stop Ratings and Accessibility Information to /output_files/.'
 
-        echo 'Export Bus Stop information where wheelchair accessibility is true'
-
-        mysql -h db -u myuser -pmypassword bctransit -B -e "
-        SELECT
-        s.stop_id,
-        s.stop_name,
-        t.name,
-        t.value,
-        t.updated_at
-        FROM tf_accessibility t
-        JOIN bus_stop s ON t.stop_id = s.stop_id
-        WHERE name = 'wheelchair' AND value = 1;
-        " | sed 's/\t/,/g' > /output/output_files/wheelchair_accessibility.csv
-
-        echo 'Exported Wheelchair accessibility' 
-
         if [ -n "$SECOND_ARG" ]; then
 
             echo 'Export Bus Stop accessibility along route'
@@ -69,7 +53,27 @@ echo 'MySQL engine is online! Checking for imported tables...'
             " | sed 's/\t/,/g' > /output/output_files/route_accessibility.csv
 
             echo 'Exported Route Accessibility'
+
         fi
+    fi
+    
+    if [ "$FIRST_ARG" = "wheelchair" ]; then
+
+        echo 'Export Bus Stop information where wheelchair accessibility is true'
+
+        mysql -h db -u myuser -pmypassword bctransit -B -e "
+        SELECT
+        s.stop_id,
+        s.stop_name,
+        t.name,
+        t.value,
+        t.updated_at
+        FROM tf_accessibility t
+        JOIN bus_stop s ON t.stop_id = s.stop_id
+        WHERE name = 'wheelchair' AND value = 1;
+        " | sed 's/\t/,/g' > /output/output_files/wheelchair_accessibility.csv
+
+        echo 'Exported Wheelchair accessibility'
 
     else
         echo 'Exporting bus_routes, bus_stops, route_stops, ratings, and accessibility table data...'
