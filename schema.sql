@@ -46,7 +46,7 @@ CREATE TABLE `proposed_changes` (
   `date_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `status` enum('pending','approved','denied') DEFAULT 'pending',
   `description` varchar(200) DEFAULT NULL,
-  `value` varchar(20) DEFAULT NULL,
+  `value` tinyint(1) DEFAULT NULL,
   `type` enum('wheelchair','shelter','trashcan','seating','sidewalk') NOT NULL,
   `reviewed_by` int DEFAULT NULL,
   PRIMARY KEY (`user_id`,`date_time`),
