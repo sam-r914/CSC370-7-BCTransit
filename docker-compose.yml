@@ -1,8 +1,8 @@
 
 services:
   db:
-    # 1. Use the official MySQL base image
-    image: mysql:latest
+    build: .
+    image: csc370-7-bctransit:latest
     environment:
       MYSQL_ROOT_PASSWORD: myrootpassword
       MYSQL_DATABASE: bctransit
