@@ -96,7 +96,7 @@ CREATE TABLE `proposed_changes` (
   `date_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `status` enum('pending','approved','denied') DEFAULT 'pending',
   `description` varchar(200) DEFAULT NULL,
-  `value` varchar(20) DEFAULT NULL,
+  `value` tinyint(1) DEFAULT NULL,
   `type` enum('wheelchair','shelter','trashcan','seating','sidewalk') NOT NULL,
   `reviewed_by` int DEFAULT NULL,
   PRIMARY KEY (`user_id`,`date_time`),
@@ -186,6 +186,13 @@ BEGIN
 		SET `status` = p_new_status,
 			`reviewed_by` = p_user_id
 		WHERE `stop_id` = p_stop_id;
+    IF p_new_status = 'approved' THEN
+      UPDATE `tf_accessibility` t
+      JOIN `proposed_changes` p
+        ON t.stop_id = p.stop_id AND t.name = p.type
+      SET t.value = p.value 
+      WHERE t.stop_id = p.stop_id AND t.name = p.type;
+    END IF;
 END ;;
 DELIMITER ;
 
