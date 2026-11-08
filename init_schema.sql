@@ -173,6 +173,7 @@ DELIMITER ;;
 CREATE DEFINER=`root`@`localhost` PROCEDURE `privileged_update_change`(
 		IN p_user_id INT,
 		IN p_stop_id INT,
+    IN p_type VARCHAR(20),
 		IN p_new_status VARCHAR(20)
 )
 BEGIN
@@ -185,7 +186,7 @@ BEGIN
 		UPDATE `proposed_changes`
 		SET `status` = p_new_status,
 			`reviewed_by` = p_user_id
-		WHERE `stop_id` = p_stop_id;
+		WHERE `stop_id` = p_stop_id AND `type` = p_type;
     IF p_new_status = 'approved' THEN
       UPDATE `tf_accessibility` t
       JOIN `proposed_changes` p
