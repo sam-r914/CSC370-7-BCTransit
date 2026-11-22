@@ -190,7 +190,7 @@ BEGIN
     IF p_new_status = 'approved' THEN
       UPDATE `tf_accessibility` t
       JOIN `proposed_changes` p
-        ON t.stop_id = p.stop_id AND t.name = p.type
+        ON t.stop_id = p.stop_id AND t.name = p.type AND p.stop_id = p_stop_id
       SET t.value = p.value 
       WHERE t.stop_id = p.stop_id AND t.name = p.type;
     END IF;
